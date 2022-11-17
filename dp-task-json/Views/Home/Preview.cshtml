@@ -1,0 +1,16 @@
+﻿@using Application.Dto
+@model ProcessedDataDto;
+
+@{
+    ViewData["Title"] = "Preview";
+}
+
+<div>
+    <button type="button" class="btn btn-primary show">Preview as plain text</button>
+    <a href="/home/DownloadFile" class="btn btn-primary" role="button" download>Download as JSON</a>
+</div>
+
+<div class="preview hidden">
+    <button type ="button" class="btn btn-secondary hide">Hide</button>
+    <p>@Model.Preview</p>
+</div>
